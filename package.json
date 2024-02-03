@@ -4,7 +4,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "wrangler pages dev dist",
-    "deploy": "$npm_execpath run build && wrangler pages deploy dist"
+    "deploy": "$npm_execpath run build && wrangler pages deploy dist",
+    "gitpush": "git add . && git commit -m 'update' && git push origin main"
   },
   "dependencies": {
     "hono": "^3.12.8"

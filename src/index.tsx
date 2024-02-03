@@ -9,4 +9,8 @@ app.get('/', (c) => {
   return c.render(<h1>Hello!</h1>)
 })
 
+app.get('/about', (c) => {
+  return c.render(<h1>About!</h1>)
+})
+
 export default app
