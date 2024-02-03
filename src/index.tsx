@@ -18,7 +18,7 @@ app.get('/about', async (c) => {
 })
 
 app.get('/ping', async (c) => {
-  const res = await fetch('https://ev2-prod-node-red-11839213-b3c.herokuapp.com/')
+  const res = await fetch('https://ev2-prod-node-red-8d0b8a7e-a0d.herokuapp.com/json')
   const data = await res.json()
   // console.log(JSON.stringify(data, null, 2));
   const html = JSON.stringify(data, null, 2);
