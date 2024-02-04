@@ -42,3 +42,13 @@ const sitemap_data = `
 </urlset>`;
 
 await Bun.write('static/sitemap.xml', sitemap_data);
+
+/**
+ * style.css
+ * */
+const style = `h1 { 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333bf;
+}`
+
+await Bun.write('static/style.css', style);
