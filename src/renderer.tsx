@@ -4,7 +4,7 @@ import { css, cx, keyframes, Style } from 'hono/css'
 export const renderer = jsxRenderer(
   ({ children, title }) => {
     return (
-      <html>
+      <html lang='ja'>
         <head>
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
