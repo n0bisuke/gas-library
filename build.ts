@@ -27,11 +27,10 @@ for (const route of app.routes) {
     }
 }
 
-const sitemap_data = `
-<?xml version="1.0" encoding="UTF-8"?>
+const sitemap_data = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>${BASE_URL}</loc>
+        <loc>${BASE_URL}/</loc>
         <lastmod>${BUILDED_TIME}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -57,9 +56,8 @@ await Bun.write('static/style.css', style);
  * robots.txt
  * */
 
-const robots = `
-Use-Agent: *
+const robots = `User-agent: *
 Allow: /
-`;
+Sitemap: ${BASE_URL}/sitemap.xml`;
 
 await Bun.write('static/robots.txt', robots);
