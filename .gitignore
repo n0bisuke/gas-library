@@ -2,6 +2,7 @@ node_modules
 dist
 .wrangler
 .dev.vars
+static
 
 # Change them to your taste:
 wrangler.toml

@@ -8,6 +8,7 @@
       "ESNext"
     ],
     "types": [
+      "bun-types",
       "@cloudflare/workers-types",
       "vite/client"
     ],
