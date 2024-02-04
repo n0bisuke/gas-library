@@ -52,3 +52,14 @@ const style = `h1 {
 }`
 
 await Bun.write('static/style.css', style);
+
+/**
+ * robots.txt
+ * */
+
+const robots = `
+Use-Agent: *
+Allow: /
+`;
+
+await Bun.write('static/robots.txt', robots);
