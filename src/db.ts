@@ -74,7 +74,46 @@ const getDB = () => {
             
             //Now you can log and it will also log to the spreadsheet
             Logger.log("That's all you need to do");`
-        }
+        },
+        {
+            id: 8,
+            name: `Gexpress`,
+            description: `Expressのような感じにルーティングしてくれるライブラリ`,
+            description_en: ``,
+            url: `https://github.com/coderofsalvation/Gexpress`,
+            scriptId: `1Lm_jNmD2FWYF-Kgj7AdHVvLEVXZ4c5AXwzd1KJSb48scn0HLBq64um7S`,
+            author: `coderofsalvation`,
+            sample: `
+            var app   = new Gexpress.App()
+            var cache = CacheService.getScriptCache()
+
+            cache.put("/hello", JSON.stringify({date: new Date()}) )
+
+            app.use(function(req,res,next){
+            req.user = {email:Session.getActiveUser().getEmail()}
+            next()
+            })
+
+            app.get('/hello',function(req,res,next){
+            res.set('content-type','application/json')
+            res.send( cache.get('/hello') )
+            res.end()
+            },true)
+
+            app.get('/client.js', app.client() )
+
+            app.get(/.*/, function(req,res,next){
+            res.set('content-type','text/html')
+            res.send("<html><body><h1>Hello</h1></body></html>") // see docs for template-usage & banner-removal
+            res.end()
+            })
+
+            // this hooks Gexpress into appscript 
+            function doGet(e) { return app.doGet(e)  }
+            function doPost(e){ return app.doPost(e) }
+            `
+        },
+
     ]
 }
 
