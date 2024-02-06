@@ -63,7 +63,12 @@ db.forEach(page => {
             <p>Script ID: <em class={headerClass}>{page.scriptId}</em></p>
             <p><a href={page.url} target="_blank">関連URL(外部)</a></p>
             <p></p>
-            <p>by @n0bisuke</p>
+            <p>by @{page.author}</p>
+            <h2>Sample</h2>
+
+            <pre class="line-numbers"><code class="language-javascript">
+            {page.sample}
+            </code></pre>
           </div>
         )
       })    
