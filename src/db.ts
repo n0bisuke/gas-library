@@ -53,6 +53,15 @@ const getDB = () => {
             url: ``,
             scriptId: `15hgNOjKHUG4UtyZl9clqBbl23sDvWMS8pfDJOyIapZk5RBqwL3i-rlCo`,
             author: `-`
+        },
+        {
+            id: 7,
+            name: `BetterLog`,
+            description: `スプレッドシートにログを出してくれるライブラリです。`,
+            description_en: ``,
+            url: ``,
+            scriptId: `1DSyxam1ceq72bMHsE6aOVeOl94X78WCwiYPytKi7chlg4x5GqiNXSw0l`,
+            author: `-`
         }
     ]
 }
