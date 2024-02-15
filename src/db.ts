@@ -112,8 +112,7 @@ const getDB = () => {
             function doGet(e) { return app.doGet(e)  }
             function doPost(e){ return app.doPost(e) }
             `
-        },
-
+        }
     ]
 }
 

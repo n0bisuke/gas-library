@@ -23,7 +23,7 @@ for (let i = 0,len = db.length; i < len; i++) {
 const app = new Hono()
 app.use(renderer)
 
-const TITLE = 'Google Apps Script - 3rd Paty Library List';
+const TITLE = 'Google Apps Script（GAS） - Library List Database';
 app.get('/', (c) => {
   return c.render(
     <div>
